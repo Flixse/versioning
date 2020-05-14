@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Entity
@@ -19,7 +18,7 @@ import java.util.Set;
 @AllArgsConstructor
 public class AccountEntity {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idaccount")
     private Integer id;
 
@@ -28,6 +27,6 @@ public class AccountEntity {
     @Column(name = "lastname")
     private String lastName;
 
-    @OneToMany(targetEntity=AddressEntity.class, mappedBy="account",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(targetEntity = AddressEntity.class, mappedBy = "account", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<AddressEntity> address = new ArrayList<>();
 }

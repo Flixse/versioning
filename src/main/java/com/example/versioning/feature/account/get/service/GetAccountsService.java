@@ -4,7 +4,7 @@ import com.example.versioning.feature.common.account.Account;
 
 import java.util.List;
 
-public interface GetAccountService {
+public interface GetAccountsService {
 
     Account getAccount(int id);
     List<Account> getAccounts();

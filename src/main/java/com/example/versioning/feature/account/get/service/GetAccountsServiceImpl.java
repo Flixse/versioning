@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service("getAccountsService")
 @RequiredArgsConstructor
-public class GetAccountServiceImpl implements GetAccountService {
+public class GetAccountsServiceImpl implements GetAccountsService {
 
     private final AccountRepository accountRepository;
     private final GetAccountMapper getAccountMapper;

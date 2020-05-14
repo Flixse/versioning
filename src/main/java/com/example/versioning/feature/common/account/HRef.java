@@ -3,10 +3,10 @@ package com.example.versioning.feature.common.account;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Builder
-public class Account {
-    private String firstName;
-    private String lastName;
-    private HRef href;
+public class HRef {
+    private List<HRefDetail> address;
 }
