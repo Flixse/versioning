@@ -3,6 +3,7 @@ package com.example.versioning.resource;
 import com.example.versioning.feature.account.create.service.CreateAccountService;
 import com.example.versioning.feature.account.get.service.GetAccountsService;
 import com.example.versioning.feature.common.account.Account;
+import com.example.versioning.feature.common.account.AccountV3;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +35,11 @@ public class AccountResource {
 
     @PostMapping("/accounts")
     public Account createAccount(@RequestBody Account account) {
+        return createAccountService.createAccount(account);
+    }
+
+    @PostMapping("v3/accounts")
+    public Account createAccountV3(@RequestBody AccountV3 account) {
         return createAccountService.createAccount(account);
     }
 }
