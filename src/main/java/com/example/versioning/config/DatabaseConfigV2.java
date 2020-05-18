@@ -16,11 +16,11 @@ import java.util.HashMap;
 
 @Configuration
 @EnableJpaRepositories(
-        basePackages = "com.example.versioning.feature.account.get.repository.v2",
+        basePackages = {"com.example.versioning.feature.account.get.repository.v2"},
         entityManagerFactoryRef = "entityManagerV2",
         transactionManagerRef = "transactionManagerV2"
 )
-public class DBConfigV2 {
+public class DatabaseConfigV2 {
 
     @Autowired
     private Environment env;
@@ -29,6 +29,7 @@ public class DBConfigV2 {
     private DataSource secondaryDataSource;
 
     @Bean
+    @Qualifier("entityManagerV2")
     public LocalContainerEntityManagerFactoryBean entityManagerV2() {
         LocalContainerEntityManagerFactoryBean em
                 = new LocalContainerEntityManagerFactoryBean();
@@ -50,6 +51,7 @@ public class DBConfigV2 {
     }
 
     @Bean
+    @Qualifier("transactionManagerV2")
     public PlatformTransactionManager transactionManagerV2() {
 
         JpaTransactionManager transactionManager

@@ -1,4 +1,4 @@
-package com.example.versioning.feature.account.get.repository;
+package com.example.versioning.feature.account.get.repository.v1;
 
 import com.example.versioning.feature.common.account.AccountEntity;
 import org.springframework.data.repository.CrudRepository;

@@ -1,7 +1,7 @@
 package com.example.versioning.feature.account.get.service;
 
 import com.example.versioning.feature.account.get.mapper.GetAccountMapper;
-import com.example.versioning.feature.account.get.repository.AccountRepository;
+import com.example.versioning.feature.account.get.repository.v1.AccountRepository;
 import com.example.versioning.feature.common.account.Account;
 import com.example.versioning.feature.common.account.AccountEntity;
 import lombok.RequiredArgsConstructor;

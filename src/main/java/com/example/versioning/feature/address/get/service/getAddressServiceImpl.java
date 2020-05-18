@@ -1,6 +1,6 @@
 package com.example.versioning.feature.address.get.service;
 
-import com.example.versioning.feature.account.get.repository.AccountRepository;
+import com.example.versioning.feature.account.get.repository.v1.AccountRepository;
 import com.example.versioning.feature.address.get.mapper.AddressMapper;
 import com.example.versioning.feature.common.address.Address;
 import lombok.RequiredArgsConstructor;
